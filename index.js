@@ -402,14 +402,16 @@ class TelegramBot extends EventEmitter {
   /** Use this method to edit live location messages. A location can be edited until its live_period expires or editing is explicitly disabled by a call to stopMessageLiveLocation. On success, if the edited message is not an inline message, the edited Message is returned, otherwise True is returned.
    * @param {Float} latitude Latitude of new location
    * @param {Float} longitude Longitude of new location
+   *
    * @param {object} [options]
-   * @param {Integer | String} [options.chatId] Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the forma* @channelusername)
    * @param {Integer} [options.messageId] Required if inline_message_id is not specified. Identifier of the message to edit
    * @param {String} [options.inlineMessageId] Required if chat_id and message_id are not specified. Identifier of the inline message
    * @param {Float} [options.horizontalAccuracy] The radius of uncertainty for the location, measured in meters; 0-1500
    * @param {Integer} [options.heading] Direction in which the user is moving, in degrees. Must be between 1 and 360 if specified.
    * @param {Integer} [options.proximityAlertRadius] Maximum distance for proximity alerts about approaching another chat member, in meters. Must be between 1 and 100000 if specified.
    * @param {InlineKeyboardMarkup} [options.replyMarkup] A JSON-serialized object for a new inline keyboard.
+   * @param {Integer | String} [options.chatId] Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the forma* @channelusername)
+   *
    * @returns {Promise<Message | boolean>}
    */
   async editMessageLiveLocation(latitude, longitude, options = {}) {
@@ -420,10 +422,10 @@ class TelegramBot extends EventEmitter {
 
   /** Use this method to stop updating a live location message before live_period expires. On success, if the message was sent by the bot, the sent Message is returned, otherwise True is returned.
    * @param {Object} [options]
-   * @param {Integer | String} [options.chatId] Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the forma* @channelusername)
    * @param {Integer} [options.messageId] Required if inline_message_id is not specified. Identifier of the message with live location to stop
    * @param {String} [options.inlineMessageId] Required if chat_id and message_id are not specified. Identifier of the inline message
    * @param {InlineKeyboardMarkup} [options.replyMarkup] A JSON-serialized object for a new inline keyboard.
+   * @param {Integer | String} [options.chatId] Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the forma* @channelusername)
    * @returns {Promise<Message | boolean>}
    */
   async stopMessageLiveLocation(options = {}) {
@@ -870,13 +872,13 @@ class TelegramBot extends EventEmitter {
   /** Use this method to edit text and game messages. On success, if the edited message is not an inline message, the edited Message is returned, otherwise True is returned.
    * @param {String} text New text of the message, 1-4096 characters after entities parsing
    * @param {Object} [options]
-   * @param {Integer | String} [options.chatId] Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the forma* @channelusername)
    * @param {Integer} [options.messageId] Required if inline_message_id is not specified. Identifier of the message to edit
    * @param {String} [options.inlineMessageId] Required if chat_id and message_id are not specified. Identifier of the inline message
    * @param {String} [options.parseMode] Mode for parsing entities in the message text. See formatting options for more details.
    * @param {MessageEntity[]} [options.entities] List of special entities that appear in message text, which can be specified instead of parse_mode
    * @param {Boolean} [options.disableWebPagePreview] Disables link previews for links in this message
    * @param {InlineKeyboardMarkup} [options.replyMarkup] A JSON-serialized object for an inline keyboard.
+   * @param {Integer | String} [options.chatId] Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the forma* @channelusername)
    * @returns {Promise<Message | boolean>}
    */
   async editMessageText(text, options = {}) {
@@ -887,13 +889,13 @@ class TelegramBot extends EventEmitter {
 
   /** Use this method to edit captions of messages. On success, if the edited message is not an inline message, the edited Message is returned, otherwise True is returned.
    * @param {Object} [options]
-   * @param {Integer | String} [options.chatId] Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the forma* @channelusername)
    * @param {Integer} [options.messageId] Required if inline_message_id is not specified. Identifier of the message to edit
    * @param {String} [options.inlineMessageId] Required if chat_id and message_id are not specified. Identifier of the inline message
    * @param {String} [options.caption] New caption of the message, 0-1024 characters after entities parsing
    * @param {String} [options.parseMode] Mode for parsing entities in the message caption. See formatting options for more details.
    * @param {MessageEntity[]} [options.captionEntities] List of special entities that appear in the caption, which can be specified instead of parse_mode
    * @param {InlineKeyboardMarkup} [options.replyMarkup] A JSON-serialized object for an inline keyboard.
+   * @param {Integer | String} [options.chatId] Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the forma* @channelusername)
    * @returns {Promise<Message | boolean>}
    */
   async editMessageCaption(options = {}) {
@@ -905,10 +907,10 @@ class TelegramBot extends EventEmitter {
   /** Use this method to edit animation, audio, document, photo, or video messages. If a message is part of a message album, then it can be edited only to an audio for audio albums, only to a document for document albums and to a photo or a video otherwise. When an inline message is edited, a new file can't be uploaded. Use a previously uploaded file via its file_id or specify a URL. On success, if the edited message was sent by the bot, the edited Message is returned, otherwise True is returned.
    * @param {InputMedia} media A JSON-serialized object for a new media content of the message
    * @param {Object} [options]
-   * @param {Integer | String} [options.chatId] Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the forma* @channelusername)
    * @param {Integer} [options.messageId] Required if inline_message_id is not specified. Identifier of the message to edit
    * @param {String} [options.inlineMessageId] Required if chat_id and message_id are not specified. Identifier of the inline message
    * @param {InlineKeyboardMarkup} [options.replyMarkup] A JSON-serialized object for a new inline keyboard.
+   * @param {Integer | String} [options.chatId] Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the forma* @channelusername)
    * @returns {Promise<Message | boolean>}
    */
   async editMessageMedia(media, options = {}) {
@@ -919,10 +921,10 @@ class TelegramBot extends EventEmitter {
 
   /** Use this method to edit only the reply markup of messages. On success, if the edited message is not an inline message, the edited Message is returned, otherwise True is returned.
    * @param {Object} [options]
-   * @param {Integer | String} [options.chatId] Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the forma* @channelusername)
    * @param {Integer} [options.messageId] Required if inline_message_id is not specified. Identifier of the message to edit
    * @param {String} [options.inlineMessageId] Required if chat_id and message_id are not specified. Identifier of the inline message
    * @param {InlineKeyboardMarkup} [options.replyMarkup] A JSON-serialized object for an inline keyboard.
+   * @param {Integer | String} [options.chatId] Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the forma* @channelusername)
    * @returns {Promise<Message |boolean >}
    */
   async editMessageReplyMarkup(options = {}) {
