@@ -1,5 +1,5 @@
 {
-  "name": "tbot",
+  "name": "@masterarthur/tbot",
   "version": "1.0.0",
   "description": "Telegram Bot API Wrapper",
   "main": "index.js",
