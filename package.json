@@ -1,0 +1,33 @@
+{
+  "name": "tbot",
+  "version": "1.0.0",
+  "description": "Telegram Bot API Wrapper",
+  "main": "index.js",
+  "scripts": {
+    "jsdoc": "jsdoc index.js",
+    "tsdoc": "jsdoc -t node_modules/tsd-jsdoc/dist -r index.js ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mainarthur/tbot.git"
+  },
+  "keywords": [
+    "telegram",
+    "bot"
+  ],
+  "author": "masterarthur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mainarthur/tbot/issues"
+  },
+  "homepage": "https://github.com/mainarthur/tbot#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "types": "./out/types.d.ts",
+  "devDependencies": {
+    "jsdoc": "^3.6.7",
+    "tsd-jsdoc": "^2.5.0"
+  }
+}
